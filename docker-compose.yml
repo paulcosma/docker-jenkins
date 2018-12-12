@@ -32,5 +32,4 @@ services:
         window: 120s
 volumes:
   jenkins_home:
-  $(which docker):
 
