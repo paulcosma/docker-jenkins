@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:lts
+LABEL maintainer="paulcosma@gmail.com"
 
 # Setting the number of executors
 COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
