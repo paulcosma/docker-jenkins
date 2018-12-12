@@ -10,15 +10,15 @@ getent group docker | awk -F: '{printf "Group %s with GID=%d\n", $1, $3}'
 ```sh
 getent passwd 999 | cut -d: -f1
 ```
-If another user is using id 999, change it. (e.g. change to 1005)
+If any user is using id 999 change it (e.g. use 1005 instead)
 
-### Change Docker id to 999 (id 1000 is used by jenkins):
+### Change Docker id and gid to 999 (id 1000 is used by jenkins):
 ```sh
 usermod -u 999 docker
 groupmod -g 999 docker
 ```
 
-### Verify changes:
+### Verify new Docker id and gid:
 ```sh
 id docker
 getent group docker | awk -F: '{printf "Group %s with GID=%d\n", $1, $3}'

@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  jenkins-docker:
+    image: paulcosma/jenkins-docker:latest
+    build:
+      context: .
+      dockerfile: jenkins.Dockerfile
+      args:
+        DOCKER_GID: 999
+    ports:
+      - "8080:8080"
+      - "49187:49187"
+    environment:
+      - JENKINS_SLAVE_AGENT_PORT=49187
+      - JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP=""
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - /tmp:/tmp
+    restart: always
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+volumes:
+  jenkins_home:
+  $(which docker):
+
