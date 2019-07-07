@@ -1,1 +1,14 @@
+allure-jenkins-plugin:latest
+authorize-project:latest
+blueocean:latest
+docker-plugin:latest
+extensible-choice-parameter:latest
+gitlab-plugin:latest
+git-parameter:latest
+git-tag-message:latest
 greenballs:latest
+groovy:latest
+jobConfigHistory:latest
+kubernetes:latest
+performance:latest
+saferestart:latest
