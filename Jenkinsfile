@@ -4,7 +4,7 @@ pipeline {
         DEPLOY_TO = 'master'
   }
   options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
+    buildDiscarder(logRotator(numToKeepStr: '3'))
   }
   triggers {
     cron('@daily')
@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker image build -f jenkins.Dockerfile --build-arg DOCKER_GID=1005 -t paulcosma/jenkins-docker .'
+        sh 'docker image build --no-cache -f jenkins.Dockerfile --build-arg DOCKER_GID=999 -t paulcosma/jenkins-docker .'
       }
     }
     stage('Login') {
