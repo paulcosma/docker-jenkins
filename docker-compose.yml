@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: jenkins.Dockerfile
       args:
-        DOCKER_GID: 999
+        DOCKER_GID: 998
     ports:
       - "8080:8080"
       - "49187:49187"

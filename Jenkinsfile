@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker image build --no-cache -f jenkins.Dockerfile --build-arg DOCKER_GID=999 -t paulcosma/jenkins-docker .'
+        sh 'docker image build --no-cache -f jenkins.Dockerfile --build-arg DOCKER_GID=998 -t paulcosma/jenkins-docker .'
       }
     }
     stage('Login') {
