@@ -18,6 +18,11 @@ pipeline {
 
       }
     }
+    stage('Get latest Jenkins image') {
+          steps {
+            sh 'docker image pull jenkins/jenkins:latest'
+          }
+    }
     stage('Build') {
       steps {
         sh 'docker image build --no-cache -f jenkins.Dockerfile --build-arg DOCKER_GID=998 -t paulcosma/jenkins-docker .'
