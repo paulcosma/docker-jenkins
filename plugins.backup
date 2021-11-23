@@ -10,7 +10,5 @@ groovy:latest
 jobConfigHistory:latest
 kubernetes:latest
 maven-plugin:latest
-performance:latest
 saferestart:latest
-testng-plugin:latest
 basic-branch-build-strategies:latest

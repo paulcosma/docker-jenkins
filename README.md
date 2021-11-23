@@ -1,5 +1,5 @@
 # docker-jenkins
-Jenkins in docker with access to host docker. 
+Jenkins in docker with access to host docker.
 
 ## Change Docker ID
 #### Get GID of Docker Host:
@@ -40,4 +40,3 @@ Install Java on VM and add it as a Jenkins slave.
 ```
 apt update && apt install default-jre
 ```
-
