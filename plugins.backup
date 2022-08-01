@@ -9,6 +9,5 @@ greenballs:latest
 groovy:latest
 jobConfigHistory:latest
 kubernetes:latest
-maven-plugin:latest
 saferestart:latest
 basic-branch-build-strategies:latest

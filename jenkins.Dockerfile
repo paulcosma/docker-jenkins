@@ -23,7 +23,6 @@ RUN jenkins-plugin-cli \
     groovy:latest \
     jobConfigHistory:latest \
     kubernetes:latest \
-    maven-plugin:latest \
     saferestart:latest \
     workflow-aggregator
 
