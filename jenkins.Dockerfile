@@ -29,7 +29,7 @@ RUN jenkins-plugin-cli \
 # Execute docker commands on Jenkins
 USER root
 RUN apt-get update && apt-get install -y libltdl7 && rm -rf /var/lib/apt/lists/*
-ARG DOCKER_GID=998
+ARG DOCKER_GID=997
 RUN groupadd -g ${DOCKER_GID} docker \
  && usermod -aG docker jenkins
 
