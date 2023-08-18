@@ -19,7 +19,6 @@ RUN jenkins-plugin-cli \
     git-parameter:latest \
     git-tag-message:latest \ 
     gitlab-plugin:latest \
-    greenballs:latest \
     groovy:latest \
     jobConfigHistory:latest \
     kubernetes:latest \
