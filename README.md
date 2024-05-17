@@ -37,6 +37,6 @@ docker run -dit --restart always --name jenkins-docker -p 8080:8080 -p 49187:491
 
 ### Jenkins Slaves
 Install Java on VM and add it as a Jenkins slave.
-```
+```sh
 apt update && apt install default-jre
 ```
